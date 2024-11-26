@@ -1,0 +1,20 @@
+version : '3'
+
+services:
+    load-balancer:
+        image: haproxy
+        container_name: haproxy-lb
+        ports:
+            - "8000:8000"
+            - "8404:8404"
+        volumes:
+            - ./haproxy:/usr/local/etc/haproxy
+        depends_on:
+            - ws-backend
+    ws-backend:
+        build:
+            context: backend/
+        deploy:
+            replicas: 4
+    redis:
+        image: redis
