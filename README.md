@@ -9,4 +9,12 @@ ws.send("Hello!")
 
 ### step 3: open multiple console windows to simulate multiple clients
 
+## Flow
+
+<img src="diagram.jpeg" width=600 height=300/>
+
+## Demo
+
 <img src="demo.jpeg" width=400 height=300/>
+
+
